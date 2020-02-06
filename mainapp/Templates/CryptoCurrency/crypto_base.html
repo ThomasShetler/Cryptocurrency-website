@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %} <!-- must load static files on every template, even though it extends another template -->
+{% block appcontent %}
+    <section>
+        <div class="flex-container wrapper">
+            <h5>Crypto Currency Central</h5>
+            <a class= 'tabNav'  href="{% url 'cryptoList' %}">Crypto Collection</a>
+            <a class= 'tabNav' href="{% url 'crypto' %}">Crypto Currency Home</a>
+            <a class= 'tabNav' href="{% url 'getRates' name='BTC'%}">Crypto Currency Exchange Rates</a>
+
+
+
+        </div>
+    </section>
+    {% block templatecontent %}{% endblock %} <!-- section that all the template specific content will render within -->
+{% endblock %}

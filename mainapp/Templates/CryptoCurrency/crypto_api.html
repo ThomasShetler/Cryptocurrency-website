@@ -1,0 +1,25 @@
+{% extends 'CryptoCurrency/crypto_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<p>Select Currency</p>
+<a href="{% url 'getRates' name='BTC'%}">BIT COIN | </a><a href="{% url 'getRates' name='LTC'%}">LITE COIN | </a><a href="{% url 'getRates' name='ETH' %}">ETHERIUM |</a>
+    <div class="flex-container">
+
+
+        {% for key, value in response.items %}
+        <b>{{ key }}:</b> </br>{{ value }} </br>
+        {% endfor %}
+
+
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.coins }} <!-- this only renders the td tags, still need the table tags -->
+            </table>
+            {{ form.non_field_errors }}
+
+            <button class="primary-bright-button" type="submit"> Add to Collection </button>
+        </form>
+    </div>
+
+{% endblock %}

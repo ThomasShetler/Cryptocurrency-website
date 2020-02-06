@@ -1,0 +1,11 @@
+{% extends 'CryptoCurrency/crypto_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+
+<form method="POST">
+            {% csrf_token "{{info.name}}"? %}
+            <h1>Do you want to delete the book?</h1>
+    <p><button class="primary-bright-button" type="submit">Delete</button> <button class="primary-bright-button" type="button" onclick="location.href='crypto_delete'"> Cancel </button></p>
+</form>
+
+{% endblock %}

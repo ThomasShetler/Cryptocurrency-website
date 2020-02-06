@@ -1,0 +1,345 @@
+/* Defining Root Colors */
+:root{
+    --midtone: #8D7148;
+    --neutral: #B49159;
+    --contrast: #403025;
+    --standout: #2F3C48;
+    --highlight: #f7c552;
+    --banner: #f89624;
+    --dark: #232323;
+    --footer: #675036;
+    --lightGray: #E8EFF6;
+}
+
+body{
+    background: linear-gradient(180deg, black, transparent 20%), linear-gradient(360deg, #000, transparent 20%), #090c1f url(/static/images/wall-ship.jpg) no-repeat center center fixed;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    max-height: 100%;
+    margin: 0;
+    overflow: scroll;
+}
+
+.jumbotron{
+    background-color: transparent;
+    color:var(--neutral);
+}
+.main-content {
+    color:#fff!important;
+    letter-spacing:1px;
+    background: #0e0d0db8;
+    padding: 10px 40px;
+    border: solid 1px var(--lightGray);
+    border-radius: 20px;
+}
+
+.main-content p {
+    color:#fff;
+    font-style:italic;
+    word-spacing: 3.5px;
+}
+
+/* ===========================================
+  Navigation Bar styling  //  START
+=============================================*/
+.navbar-global .navbar-brand {
+    color: white;
+    border-radius: 10px;
+    font-family: 'Permanent Marker', cursive;
+    background:#0000009e;
+}
+.collapsed + .main-content {
+    margin-left: 30px;
+}
+
+#buttonList {
+    transition: all .7s;
+}
+.wheelButtons{
+    display: flex;
+    justify-content: center;
+}
+
+.wheelButtons a {
+    display: flex;
+}
+
+.wheelButtons img{
+    width: 50px;
+    background: var(--dark);
+    border-radius: 50%;
+}
+
+.wheelButtons figcaption{
+    color: var(--neutral);
+    margin-left: -10px;
+}
+
+#mainWheel > .wheelButtons{
+    color: var(--neutral);
+    align-self: center;
+    padding:20px;
+    width: 50px;
+    background: var(--dark);
+}
+/* ===== Navigation Bar styling  //  END =====*/
+
+/* ===========================================
+     Footer styling //  START
+=============================================*/
+.footer {
+    padding:10px 0;
+    color: var(--neutral);
+    position: fixed;
+    bottom: 30px;
+    margin: 0;
+    width: 10%;
+    background:transparent;
+}
+
+.footer .item.social > a:hover {
+    opacity:0.9;
+}
+
+.footer .copyright {
+   font-style:italic;
+    padding-bottom:14px;
+    font-size:13px;
+    margin-bottom:0;
+    color:#fff;
+}
+/* =====  Footer styling  //  END =====*/
+
+/* Beginning of the stock CSS template */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+ul {
+	list-style: none;
+	margin: 0px;
+}
+
+p {
+	color: var(--midtone);
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.primary-light-button {
+
+	background-color: var(--contrast);
+	color: var(--lightGray);
+	display: inline-block;
+	font-size: 12px;
+	padding:5px 12px 5px 12px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	border-radius: 20px;
+	border: none;
+	margin:1px;
+}
+
+.primary-bright-button {
+	background-color: var(--standout);
+	color: var(--neutral);
+	display: inline-block;
+	font-size: 12px;
+	padding:5px 12px 5px 12px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	border-radius: 20px;
+	border: none;
+	margin-top:3px;
+	text-transform: uppercase;
+}
+
+.primary-bright-button:hover , .primary-light-button:hover{
+    box-shadow: 0px 0px 4px 2px var(--highlight);
+}
+
+.primary-light-button:hover{
+    box-shadow: 0px 0px 4px 2px #fff;
+}
+
+/*:root{
+    --midtone: #8D7148;
+    --neutral: #B49159;
+    --contrast: #403025;
+    --standout: #2F3C48;
+    --highlight: #f7c552;
+    --banner: #f89624;
+    --dark: #232323;
+    --footer: #675036;
+    --lightGray: #E8EFF6;
+}*/
+
+.wrapper {
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.news{
+ background:#0000009e;
+ padding: 10px;
+ border-radius: 15px;
+ text-decoration:none;
+}
+
+.wrapper h5{
+background:var(--contrast);
+}
+
+.wrapper .tabNav, h5 {
+    color: #fff;
+    background:#0000009e;
+    font-style:none;
+    text-decoration:none;
+    padding:10px;
+    border-radius:20px;
+
+}
+/* End of the stock CSS template */
+
+/* ===========================================
+    Specific styling Footy Demo App //  START
+=============================================*/
+
+.footy button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.footy table{
+    width: 75%;
+    align: center;
+    margin: 20px auto;
+    border: 40px 20px 10px 20px;
+}
+
+.footy hr{
+    color: var(--banner);
+    border-top-width: 2px;
+    margin: 2px;
+}
+
+.footy h4{
+    color: var(--midtone);
+    text-align: center;
+    text-shadow: 2px 2px var(--standout);
+}
+
+.footy select, label{
+    color: var(--midtone);
+    background: var(--standout);
+    display: flex;
+}
+
+div #footyPic{
+    text-align: center;
+    position: relative;
+    padding:0;
+}
+
+#footyPic img {
+    border-radius: 10px;
+    height:10%;
+    height:500px;
+/*   padding: 80px;*/
+    align: center;
+    margin:0;
+    vertical-align:middle;
+    width:100%;
+}
+
+#footyPic span{
+    width: 100%;
+    border-radius: 10px;
+}
+.footy_top {
+ background:transparent!important;
+    display:inline-block;
+    padding:2px 3px;
+    position:relative;
+    top: -230px;
+    width:100%;
+    color: var(--neutral);
+    text-shadow: 2px 2px 5px var(--dark);
+}
+
+.footy_center{
+    display:inline-block;
+    padding:2px 3px;
+    color: var(--lightGray);
+    width: 100%;
+    margin-top:0;
+}
+.footy_caption{
+    background:var(--contrast);
+    color:var(--lightGray)
+    text-decoration:none;
+    padding:4px 6px;
+    font-family: Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    line-height:1.2;
+    display:inline-block;
+    border-radius:3px;
+    position: absolute;
+    right: 25%;
+}
+
+#jerseyCollectionPage {
+background:#0000009e;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+#jerseyCollectionPage table th
+ {
+    background:var(--standout);
+    border-radius: 10px;
+    text-align:center;
+    font-size: 13px;
+}
+
+#jerseyCollectionPage table td
+ {
+     background:var(--dark);
+     border-radius: 10px;
+     text-align:center;
+     font-size: 12px;
+}
+
+/*.footy tr,th,td{
+    color: var(--midtone);
+    background-color: var(--highlight);
+}*/
+
+
+/* =====  Specific styling Footy Demo App // END =====*/
+
+
+/* ============= RESPONSIVE max-width: 991p =========== */
+
+@media (max-width: 991px){
+
+}
+
+/* ============= RESPONSIVE max-width: 768px =========== */
+@media (max-width: 768px){
+
+}
+
+/* ============= RESPONSIVE max-width: 385px=========== */
+@media (max-width: 385px){
+
+
+}

@@ -1,0 +1,26 @@
+{% extends 'CryptoCurrency/crypto_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section >
+    <div class="flex-container" id="cryptoCollectionPage">
+        <table class="table-striped">
+            <tr>
+
+                <th class="col-md">Name</th>
+                <th class="col-md">Website</th>
+                <th class="col-md">&nbsp;coins</th>
+            </tr>
+            {% for Item in Info %}     <!-- creates a new row for each jersey in the collection -->
+                <tr>
+                    <td class="col-md">{{Item.name}}</td>
+                    <td class="col-md">{{Item.website}}</td>
+                    <td class="col-md">{{Item.coins}}</td>
+                    </td>
+                    <td class="col-md"><a href="{{Item.pk}}/Details"><button class="primary-light-button">Details</button></a></td>    <!-- creates a link for that specific jersey -->
+                </tr>
+            {% endfor %}
+        </table>
+        <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'addToList' %}'">Add to Collection</button>
+    </div>
+</section>
+{% endblock %}

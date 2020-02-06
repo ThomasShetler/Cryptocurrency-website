@@ -1,0 +1,26 @@
+{% extends 'CryptoCurrency/crypto_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section>
+    <div class="flex-container cryto">
+        <table>
+            <tr>
+                <th>name</th>
+                <td>{{info.name}}</td>
+            </tr>
+            <tr>
+                <th>website</th>
+                <td>{{info.website}}</td>
+            </tr>
+            <tr>
+                <th>Manufacturer</th>
+                <td>{{info.coins}}</td>
+            </tr>
+        <p>smol boop</p>
+        <hr />
+        <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'editWebsites' pk=info.pk %}'">Edit</button>
+        <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'cryptoList' %}'">Back to Collection</button>
+        <button class="primary-bright-button" type="button" onclick="location.href='{% url 'deleteWebsite' pk=info.pk %}'">Delete</button>
+    </div>
+</section>
+{% endblock %}

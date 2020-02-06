@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<section>
+  <nav class="navbar navbar-global navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header mx-auto">
+        <a href="{% url 'home' %}" class="navbar-brand px-3 rounded">Hobby Manager</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="appsContainer >
+        <div id="mainWheel" class="wheelButtons">
+            <a href="expand-collapse" class="js-scroll-trigger" data-toggle="collapse" data-target="#buttonList" role="button">
+              <figure>
+                <img src="{% static 'images/shipswheel.png' %}">
+                <figcaption>Collections</figcaption>
+              </figure>
+            </a>
+        </div>
+
+        <div id="buttonList" class="collapse col-12 mx-auto">
+          <div class="wheelButtons col mx-auto">
+            <a href="{% url 'footy' %}">
+                <figure class="col">
+                  <img src="{% static 'images/shipswheel.png' %}" alt="Footy App">
+                  <figcaption>Footy App</figcaption>
+                </figure>
+            </a>
+            <a href="{% url 'science' %}">
+                <figure class="col">
+                  <img src="{% static 'images/shipswheel.png' %}" alt="Add App">
+                  <figcaption>Science App</figcaption>
+                 </figure>
+            </a>
+            <a href="{% url 'scoreboard' %}">
+                <figure class="col">
+                  <img src="{% static 'images/shipswheel.png' %}" alt="Add App">
+                  <figcaption>Lakers Scoreboard App</figcaption>
+                 </figure>
+            <a href="">
+                <figure class="col">
+                  <img src="{% static 'images/shipswheel.png' %}" alt="Add App">
+                  <figcaption>Add Your App</figcaption>
+                 </figure>
+            </a>
+            <a href="{% url 'crypto' %}">
+                <figure class="col">
+                  <img src="{% static 'images/shipswheel.png' %}" alt="Add App">
+                  <figcaption>Crypto Currency</figcaption>
+                 </figure>
+            </a>
+            <a href="">
+                <figure class="col">
+                  <img src="{% static 'images/shipswheel.png' %}" alt="Add App">
+                  <figcaption>Add Your App</figcaption>
+                 </figure>
+            </a>
+
+            <!--create 4-->
+          </div>
+        </div>
+      </div>
+</section>
+
